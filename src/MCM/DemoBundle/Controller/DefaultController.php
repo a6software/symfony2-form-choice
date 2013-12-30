@@ -9,6 +9,14 @@ use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
+    private $differentColours = array(
+        0 => 'orange',
+        1 => 'violet',
+        2 => 'crimson',
+        3 => 'magenta',
+        4 => 'indigo',
+    );
+
     public function arrayChoicesAction(Request $request)
     {
         $myColour = new Colour();
@@ -29,37 +37,4 @@ class DefaultController extends Controller
             'form' => $form->createView(),
         ));
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    private $differentColours = array(
-        0 => 'orange',
-        1 => 'violet',
-        2 => 'crimson',
-        3 => 'magenta',
-        4 => 'indigo',
-    );
 }
