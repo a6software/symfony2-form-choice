@@ -19,19 +19,8 @@ class ArrayChoiceType extends AbstractType
                     3 => 'white',
                     4 => 'black',
                 ),
-                'required'      => false,
-                'label_attr'    => array(
-                    'class'     => "control-label",
-                ),
-                'attr'          => array(
-                    'class'     => "form-control",
-                )
             ))
-            ->add('save', 'submit', array(
-                'attr'          => array(
-                    'class'     => "btn btn-success",
-                )
-            ))
+            ->add('save', 'submit')
         ;
     }
 
@@ -40,10 +29,6 @@ class ArrayChoiceType extends AbstractType
     {
         $resolver->setDefaults(array(
             'data_class' => 'MCM\DemoBundle\Entity\Colour',
-            'attr'       => array(
-                'class'     => 'form-horizontal',
-                'role'      => 'form',
-            ),
         ));
     }
 
